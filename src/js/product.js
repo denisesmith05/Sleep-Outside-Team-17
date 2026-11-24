@@ -7,6 +7,7 @@ function addProductToCart(product) {
   const savedCart = getLocalStorage('so-cart');
 
   const cartItems = Array.isArray(savedCart)
+    // if savedCart is an array, use it as is, otherwise, if savedCart is not an array but exists, wrap it in an array, else use an empty array.
     ? savedCart
     : savedCart
       ? [savedCart]
